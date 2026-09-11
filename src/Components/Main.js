@@ -3,13 +3,17 @@ import { useNavigate } from "react-router-dom";
 import BookingForm from "./BookingForm";
 
 function initializeTimes() {
-  const today = new Date();
-
-  return fetchAPI(today);
+  return [
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00"
+  ];
 }
 
 function updateTimes(state, action) {
-  return fetchAPI(new Date(action.date));
+  return state;
 }
 
 function Main() {
@@ -22,11 +26,7 @@ function Main() {
   const navigate = useNavigate();
 
   function submitForm(formData) {
-    const success = submitAPI(formData);
-
-    if (success) {
-      navigate("/confirmed");
-    }
+    navigate("/confirmed");
   }
 
   return (
