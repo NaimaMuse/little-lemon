@@ -1,16 +1,17 @@
-import Main from "../Components/Main";
+import React from 'react';
+import BookingForm from '../Components/BookingForm';
 
-function BookingPage() {
+function BookingPage({ availableTimes, dispatch, submitForm }) {
   return (
-    <main>
-      <h1>Book a Table</h1>
-
-      <p>
-        Reserve your table at Little Lemon.
-      </p>
-
-      <Main />
-    </main>
+    <div className="booking-page-container container">
+      <h1>Reserve a Table</h1>
+      <p>Please fill out the form below to reserve your table at Little Lemon.</p>
+      <BookingForm
+        availableTimes={availableTimes}
+        dispatch={dispatch}
+        submitForm={submitForm}
+      />
+    </div>
   );
 }
 
