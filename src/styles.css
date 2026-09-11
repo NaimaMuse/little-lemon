@@ -1,0 +1,364 @@
+/* ========================================
+   1. GLOBAL STYLES
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ========================================
+   2. HEADINGS
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* ========================================
+   3. PARAGRAPHS AND SPANS
+======================================== */
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+span {
+  font-size: inherit;
+}
+
+
+/* ========================================
+   4. HEADER
+======================================== */
+
+header {
+  padding: 20px 5%;
+  background-color: #ffffff;
+}
+
+
+/* ========================================
+   5. NAVIGATION
+======================================== */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  padding: 8px 4px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #f4ce14;
+}
+
+
+/* ========================================
+   6. MAIN LAYOUT
+======================================== */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  padding: 40px 5%;
+}
+
+main section {
+  grid-column: 2 / 12;
+}
+
+
+/* ========================================
+   7. HERO
+======================================== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+
+/* ========================================
+   8. BUTTONS
+======================================== */
+
+button,
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f4ce14;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #d9b80f;
+}
+
+
+/* ========================================
+   9. CARDS
+======================================== */
+
+.cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 250px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 1rem;
+}
+
+
+/* ========================================
+   10. HIGHLIGHTS
+======================================== */
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.highlights-grid article {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.highlights-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+/* ========================================
+   11. FOOTER
+======================================== */
+
+footer {
+  padding: 30px 5%;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+footer h2 {
+  margin-bottom: 1rem;
+}
+
+footer nav {
+  justify-content: flex-start;
+}
+
+footer ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #f4ce14;
+}
+
+
+/* ========================================
+   12. RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Main */
+  main {
+    grid-template-columns: 1fr;
+    padding: 30px 5%;
+  }
+
+  main section {
+    grid-column: 1;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Hero */
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Cards */
+  .cards {
+    flex-direction: column;
+  }
+
+  /* Highlights */
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  footer ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
