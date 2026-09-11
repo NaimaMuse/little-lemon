@@ -362,3 +362,18 @@ footer a:hover {
     gap: 10px;
   }
 }
+
+.confirmation {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.confirmation h1 {
+  margin-bottom: 20px;
+}
+
+.confirmation p {
+  font-size: 1.1rem;
+}

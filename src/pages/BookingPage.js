@@ -1,15 +1,15 @@
-import BookingForm from "../Components/BookingForm";
+import Main from "../Components/Main";
 
 function BookingPage() {
   return (
     <main>
-      <h1>Reserve a Table</h1>
+      <h1>Book a Table</h1>
 
       <p>
-        Book your table at Little Lemon.
+        Reserve your table at Little Lemon.
       </p>
 
-      <BookingForm />
+      <Main />
     </main>
   );
 }

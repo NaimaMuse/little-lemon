@@ -1,18 +1,15 @@
 import { useReducer } from "react";
+import { useNavigate } from "react-router-dom";
 import BookingForm from "./BookingForm";
 
 function initializeTimes() {
-  return [
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00"
-  ];
+  const today = new Date();
+
+  return fetchAPI(today);
 }
 
 function updateTimes(state, action) {
-  return state;
+  return fetchAPI(new Date(action.date));
 }
 
 function Main() {
@@ -22,20 +19,27 @@ function Main() {
     initializeTimes
   );
 
+  const navigate = useNavigate();
+
+  function submitForm(formData) {
+    const success = submitAPI(formData);
+
+    if (success) {
+      navigate("/confirmed");
+    }
+  }
+
   return (
     <main>
-      <h1>Welcome to Little Lemon</h1>
-
-      <p>
-        We are a family-owned Mediterranean restaurant in Chicago.
-      </p>
-
       <BookingForm
         availableTimes={availableTimes}
         dispatch={dispatch}
+        submitForm={submitForm}
       />
     </main>
   );
 }
 
 export default Main;
+
+export { initializeTimes, updateTimes };
